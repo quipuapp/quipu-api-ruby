@@ -1,9 +1,11 @@
 require 'oauth2'
 
 module QuipuApi
+  MissingAuthInfo = Class.new(StandardError)
+
   module OAuth
     def get_token(mode)
-      raise 'Unconfigured' unless auth_configured?
+      raise MissingAuthInfo unless auth_configured?
 
       case mode
       when :client_credentials
