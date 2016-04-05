@@ -1,0 +1,1 @@
+require 'quipu-api/invoice'
