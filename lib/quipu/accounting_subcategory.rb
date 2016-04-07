@@ -1,6 +1,6 @@
-require 'quipu-api/base'
+require 'quipu/base'
 
-module QuipuApi
+module Quipu
   class AccountingSubcategory < Base
   end
 end

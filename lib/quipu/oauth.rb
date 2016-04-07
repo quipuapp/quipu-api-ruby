@@ -1,6 +1,6 @@
 require 'oauth2'
 
-module QuipuApi
+module Quipu
   MissingAuthInfo = Class.new(StandardError)
 
   module OAuth

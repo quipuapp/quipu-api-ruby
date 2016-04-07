@@ -1,12 +1,12 @@
 require 'json_api_client'
 
-module QuipuApi
+module Quipu
   class Base < JsonApiClient::Resource
     def self.setup
-      self.site = QuipuApi.config.base_url
+      self.site = Quipu.config.base_url
 
       connection do |connection|
-        connection.use FaradayMiddleware::OAuth2, QuipuApi.token
+        connection.use FaradayMiddleware::OAuth2, Quipu.token
         connection.use Faraday::Response::Logger
       end
     end

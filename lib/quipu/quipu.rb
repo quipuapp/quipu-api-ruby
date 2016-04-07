@@ -1,6 +1,6 @@
-require 'quipu-api/oauth'
+require 'quipu/oauth'
 
-module QuipuApi
+module Quipu
   extend OAuth
 
   @base_setup_done = false
@@ -20,7 +20,7 @@ module QuipuApi
 
     if !@base_setup_done && auth_configured?
       @base_setup_done = true
-      QuipuApi::Base.setup
+      Quipu::Base.setup
     end
 
     @config
