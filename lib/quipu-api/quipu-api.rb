@@ -5,9 +5,9 @@ module QuipuApi
 
   @base_setup_done = false
 
-  DEFAULT_BASE_URL = 'http://getquipu.dev:3000'
+  DEFAULT_BASE_URL = 'https://getquipu.com'
 
-  Configuration = Struct.new(:mode, :base_url, :client_id, :client_secret)
+  Configuration = Struct.new(:mode, :base_url, :client_id, :client_secret, :token)
 
   module_function
 

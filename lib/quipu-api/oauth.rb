@@ -4,13 +4,18 @@ module QuipuApi
   MissingAuthInfo = Class.new(StandardError)
 
   module OAuth
-    def get_token(mode)
+    def get_token
       raise MissingAuthInfo unless auth_configured?
 
-      case mode
-      when :client_credentials
-        client.client_credentials.get_token.token
-      end
+      client.client_credentials.get_token.token
+    end
+
+    def token
+      @config.token ||= get_token
+    end
+
+    def refresh_token
+      @config.token = get_token
     end
 
     def auth_configured?
