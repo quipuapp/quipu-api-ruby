@@ -29,7 +29,7 @@ Quipu.config do |conf|
 end
 ```
 
-The base URL for the API can be changed on the configuratin too, to account for different
+The base URL for the API can be changed on the configuration too, to account for different
 environments:
 
 ```ruby
